@@ -1,11 +1,9 @@
 name: terraform plan
 
 on:
-    workflow_dispatch:
-        inputs:
-            public_ip:
-                type: string
-                required: true
+    push:
+        branches:
+            - infrastructure
 
 jobs:
     terraform:
